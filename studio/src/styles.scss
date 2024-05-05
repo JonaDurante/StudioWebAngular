@@ -1,0 +1,34 @@
+@import './styles/reset.scss';
+@import './styles/variables.scss';
+
+/*CUSTOMIZE BOOTSTRAP*/
+
+$primary:$cust-primary;
+$secondary:$cust-secondary;
+$success:$cust-accent;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+/* GENERAL */
+
+html {
+  font-size: $main-size;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: $primary-font-family;
+  font-size: $body-font-size;
+  background-color: $cust-background;
+  color: $cust-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $cust-text;
+}
+
+
+
+
