@@ -1,3 +1,13 @@
 @import '../../../styles/variables.scss';
 
+.nav-link {
+  color: $cust-accent;
+}
 
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+.navbar-toggler{
+background-color: $cust-accent;
+}
