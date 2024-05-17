@@ -5,6 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   private emailRegex: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
   protected loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router:Router) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -33,5 +34,10 @@ export class LoginComponent implements OnInit {
 
   loginSubmit() {
     console.log(this.loginForm);
+  }
+
+  register() {
+    // Redirigir a la página de registro
+    this.router.navigate(['/register']);
   }
 }
