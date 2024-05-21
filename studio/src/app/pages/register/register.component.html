@@ -1,5 +1,5 @@
 <div class="signupFrm" style="margin-bottom: 50px;">
-  <form (ngSubmit)="registerSubmit()" class="form">
+  <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" class="form">
     <h1 class="title">Sign up</h1>
 
     <div class="inputContainer">
