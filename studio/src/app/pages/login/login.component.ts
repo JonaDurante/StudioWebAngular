@@ -5,11 +5,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterModule], 
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -24,7 +25,10 @@ export class LoginComponent implements OnInit {
       email: [
         '',
         [
-          Validators.email, Validators.required, Validators.minLength(3), Validators.pattern(this.emailRegex),
+          Validators.email,
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern(this.emailRegex),
         ],
       ],
       password: ['', [Validators.required]],
@@ -34,4 +38,5 @@ export class LoginComponent implements OnInit {
   loginSubmit() {
     console.log(this.loginForm);
   }
+
 }

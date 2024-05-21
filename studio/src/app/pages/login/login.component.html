@@ -23,7 +23,8 @@
                 formControlName="password"
               />
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="loginForm.pristine || loginForm.invalid">Submit</button>
+            <button type="submit" class="btn btn-primary me-3" [disabled]="loginForm.pristine || loginForm.invalid">Submit</button>
+            <button type="register" class="btn btn-primary" routerLink='/register' routerLinkActive="active ">Register</button>
           </form>
         </section>
       </div>
