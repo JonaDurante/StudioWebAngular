@@ -1,21 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import '../../../styles/variables.scss';
 
-$bg: #313942;
-$ghost: #528cce;
-$heading: #e7ebf2;
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $bg;
-  font-family: 'Montserrat', sans-serif;
-}
-
-main {
+.main__container {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -24,8 +10,8 @@ main {
   text-align: center;
 }
 
-h1 {
-  color: $heading;
+.container__heading {
+  color: $cust-secondary;
   font-size: 12.5rem;
   letter-spacing: .10em;
   margin: .025em 0;
@@ -43,13 +29,13 @@ h1 {
   }
 }
 
-h2 {
-  color: $heading;
+.container__subtitle {
+  color: $cust-secondary;
   margin-bottom: .40em;
 }
 
-p {
-  color: #ccc;
+.container_paragraph {
+  color: $cust-text;
   margin-top: 0;
 }
 
