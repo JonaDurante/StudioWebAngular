@@ -22,7 +22,7 @@
                 class="form-control"
                 id="floatingUserName"
                 placeholder="User Name"
-                formControlName="username"
+                formControlName="customusername"
                 readonly="true"
               />
             </div>
@@ -30,39 +30,28 @@
 
             <div class="form-floating">
               <input
-                type="password"
+                type="text"
                 class="form-control"
-                id="floatingPassword"
-                placeholder="Password"
-                formControlName="password"
+                id="floatingUserName"
+                placeholder="Mail"
+                formControlName="username"
                 readonly="true"
               />
             </div>
-            <label class="mb-2" for="floatingPassword mb-3">Password</label>
-
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control"
-                id="floatingConfirmPassword"
-                placeholder="Confirm Password"
-                formControlName="confirmPassword"
-                readonly="true"
-              />
-            </div>
-            <label class="mb-2" for="floatingConfirmPassword">Confirm Password</label>
+            <label class="mb-2" for="floatingUserName mb-3">Mail</label>
             
             <div class="form-floating">
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="floatingDateOfBirth"
                 placeholder="Date"
-                formControlName="DateOfBirth"
+                formControlName="dateofbirth"
                 readonly="true"
               />
             </div>
             <label for="floatingDateOfBirth">Date of Birth</label>
+
             <hr />
             <div class="row justify-content-center">
               <button type="submit" class="btn btn-info">Edit</button>
@@ -73,3 +62,4 @@
     </div>
   </div>
 </div>
+

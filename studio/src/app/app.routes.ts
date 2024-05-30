@@ -28,7 +28,7 @@ export const routes: Routes = [
     component: NotFoundComponent,
   },
   {
-    path: 'user-profile',
+    path: 'profile',
     component: UserProfileComponent,
   },
   {
