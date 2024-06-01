@@ -1,0 +1,65 @@
+<div class="row justify-content-center mt-4">
+  <div class="card col-3">
+    <div class="card-head">
+      <div class="row mt-3 d-felx justify-content-center">
+        <div class="col-6">
+          <img
+            src="../../../assets/images/UserProfile.webp"
+            class="customImg rounded-circle"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title text-center">User Profile</h1>
+      <div class="row">
+        <div class="signupFrm">
+          <form [formGroup]="userProfileForm" class="form">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingUserName"
+                placeholder="User Name"
+                formControlName="customusername"
+                readonly="true"
+              />
+            </div>
+            <label class="mb-2" for="floatingUserName mb-3">User Name</label>
+
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingUserName"
+                placeholder="Mail"
+                formControlName="username"
+                readonly="true"
+              />
+            </div>
+            <label class="mb-2" for="floatingUserName mb-3">Mail</label>
+            
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingDateOfBirth"
+                placeholder="Date"
+                formControlName="dateofbirth"
+                readonly="true"
+              />
+            </div>
+            <label for="floatingDateOfBirth">Date of Birth</label>
+
+            <hr />
+            <div class="row justify-content-center">
+              <button type="submit" class="btn btn-info">Edit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
