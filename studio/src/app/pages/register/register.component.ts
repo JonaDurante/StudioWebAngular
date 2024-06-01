@@ -46,7 +46,6 @@ export class RegisterComponent implements OnInit {
     this.registerService.register(dto).subscribe((res) => {
       if (res) {
         this.userToken = res;
-        console.log(this.userToken);
       }
     });
   }
