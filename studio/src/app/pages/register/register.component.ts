@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
+      birthDate: ['', [Validators.required]],
     });
   }
 
@@ -40,7 +41,7 @@ export class RegisterComponent implements OnInit {
       email: this.registerForm.get('email')?.value,
       password: this.registerForm.get('password')?.value,
       confirmPassword: this.registerForm.get('confirmPassword')?.value,
-      birthdate: '27/02/1995',
+      birthDate: this.registerForm.get('birthDate')?.value,
     };
     this.registerService.register(dto).subscribe((res) => {
       if (res) {

@@ -3,5 +3,5 @@ export interface UserRegister{
     email:           string;
     password:        string;
     confirmPassword: string;
-    birthdate:       string;
+    birthDate:       string;
 }
