@@ -6,6 +6,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { Store } from '@ngrx/store';
 import { AppInit } from './core/store/actions/app.action';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
