@@ -9,19 +9,20 @@ import { UserToken } from '../../../core/models/user-token';
 })
 export class UserProfileService {
   private baseUrl: string = 'https://localhost:7253/';
-  private registerUrl: string = 'Account/GetUserData';
+  private getProfileUrl: string = 'Account/GetUserDataById/';
+  private editProfileUrl: string = 'Account/EditUserData';
 
   constructor(private httpClient: HttpClient) {}
 
   public GetProfile(id: string): Observable<UserProfile> {
     return this.httpClient.get<UserProfile>(
-      this.baseUrl + 'Account/GetUserDataById/' + id
+      this.baseUrl + this.getProfileUrl + id
     );
   }
 
-  public EditProfile(userProfile: UserProfile): Observable<UserToken> {
+  public EditProfile(userProfile: UserProfile, idUser : string): Observable<UserToken> {
     return this.httpClient.post<UserToken>(
-      this.baseUrl + 'Account/EditUserData', userProfile
+      this.baseUrl + this.editProfileUrl, {userProfile, idUser}
     );
   }
 }
