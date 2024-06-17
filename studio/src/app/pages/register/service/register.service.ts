@@ -12,8 +12,10 @@ export class RegisterService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public register(userRegister: UserRegister) : Observable<UserToken> {
-    return this.httpClient.post<UserToken>('https://localhost:7253/Account/Register', userRegister);
+  public register(userRegister: UserRegister): Observable<UserToken> {
+    return this.httpClient.post<UserToken>(
+      this.baseUrl + this.registerUrl,
+      userRegister
+    );
   }
 }
-
