@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -8,6 +8,9 @@ import {
 import { RegisterService } from './service/register.service';
 import { UserRegister } from '../../core/models/user-register';
 import { UserToken } from '../../core/models/user-token';
+import { BehaviorSubject, catchError, of, Subject, takeUntil } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -16,14 +19,21 @@ import { UserToken } from '../../core/models/user-token';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit, OnDestroy {
   protected registerForm!: FormGroup;
-  private userToken!: UserToken;
+  private readonly unsuscribe$: Subject<void> = new Subject;
 
   constructor(
     private fb: FormBuilder,
-    private registerService: RegisterService
+    private registerService: RegisterService,
+    private toaster: ToastrService,
+    private router: Router
   ) {}
+
+  ngOnDestroy(): void {
+    this.unsuscribe$.next();
+    this.unsuscribe$.complete();
+  }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -43,10 +53,14 @@ export class RegisterComponent implements OnInit {
       confirmPassword: this.registerForm.get('confirmPassword')?.value,
       birthDate: this.registerForm.get('birthDate')?.value,
     };
-    this.registerService.register(dto).subscribe((res) => {
-      if (res) {
-        this.userToken = res;
-      }
-    });
+    this.registerService
+      .register(dto)
+      .pipe(
+        takeUntil(this.unsuscribe$)
+      )
+      .subscribe((res) => {
+        this.toaster.success("Check your Email")
+        this.router.navigate(['home'])
+      });
   }
 }

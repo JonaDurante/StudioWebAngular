@@ -1,16 +1,16 @@
 <div class="container py-5">
   <div class="row justify-content-center">
-    <div class="col-10 col-lg-8 p-4 bg-white rounded shadow">
-      <div class="row">
-        <div class="col-md-6 d-none d-md-block">
+    <div class="col-12 col-lg-12 p-5 bg-white rounded shadow">
+      <div class="row m-5">
+        <div class="col-md-6 d-none d-md-block" style="padding-right: 7%">
           <img
-            src="assets/images/Register.png"
+            src="assets/images/Register.jpg"
             class="img-fluid rounded"
             alt="Imagen Registro"
           />
         </div>
 
-        <div class="col-md-6" style="padding-left: 0px;">
+        <div class="col-md-6">
           <div class="col">
             <div class="row d-felx justify-content-end">LOGO</div>
           </div>
@@ -23,17 +23,7 @@
             class="form"
           >
             <div class="row mb-2">
-              <div class="inputContainer col">
-                <input
-                  type="email"
-                  class="input"
-                  formControlName="email"
-                  placeholder="Email"
-                />
-                <label for="" class="label">Email</label>
-              </div>
-
-              <div class="inputContainer col">
+              <div class="inputContainer col-6">
                 <input
                   type="text"
                   class="input"
@@ -42,10 +32,8 @@
                 />
                 <label for="" class="label">Username</label>
               </div>
-            </div>
 
-            <div class="row mb-2">
-              <div class="inputContainer">
+              <div class="inputContainer col-6">
                 <input
                   type="date"
                   class="input"
@@ -53,6 +41,18 @@
                   placeholder="Dirth Date"
                 />
                 <label for="" class="label">Birth Date</label>
+              </div>
+            </div>
+
+            <div class="row mb-2">
+              <div class="inputContainer col">
+                <input
+                  type="email"
+                  class="input"
+                  formControlName="email"
+                  placeholder="Email"
+                />
+                <label for="" class="label">Email</label>
               </div>
             </div>
 
@@ -88,24 +88,45 @@
               </label>
             </div> -->
 
-            <input type="submit" class="submitBtn col-12" value="Crear cuenta" />
+            <input
+              type="submit"
+              class="submitBtn col-12"
+              value="Crear cuenta"
+            />
 
             <div class="text-center mt-3">
-              <p>¿Ya tienes una cuenta? <a href="#">Acceso</a></p>
+              <p>
+                ¿Ya tienes una cuenta? <a class="acceder" href="#">Acceso</a>
+              </p>
               <p>O regístrate con</p>
 
-              <!-- Botones de redes sociales -->
               <div class="d-flex justify-content-center gap-3">
-                <button type="button" class="btn btn-outline-primary">
-                  <i class="bi bi-facebook"></i> Facebook
-                </button>
-                <button type="button" class="btn btn-outline-danger">
-                  <i class="bi bi-google"></i> Google
-                </button>
-                <button type="button" class="btn btn-outline-dark">
-                  <i class="bi bi-apple"></i> Apple
-                </button>
+                <div class="col-1">
+                    <a
+                      class="social-icon__link btn-sm btn-outline-primary"
+                      href="#"
+                    >
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                    <div class="col-1">
+                    <a
+                      class="social-icon__link btn-sm btn-outline-danger"
+                      href="#"
+                    >
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div class="col-1">
+                    <a
+                      class="social-icon__link btn-sm btn-outline-dark"
+                      href="#"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
               </div>
+
             </div>
           </form>
         </div>

@@ -9,7 +9,20 @@ $success:$cust-accent;
 
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+// regular style toast
+@import 'ngx-toastr/toastr';
 
+// bootstrap style toast
+// or import a bootstrap 4 alert styled design (SASS ONLY)
+// should be after your bootstrap imports, it uses bs4 variables, mixins, functions
+// @import 'ngx-toastr/toastr-bs4-alert';
+
+// if you'd like to use it without importing all of bootstrap it requires
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+// boostrap 5
+@import 'ngx-toastr/toastr-bs5-alert';
 /* GENERAL */
 
 html {
@@ -37,3 +50,5 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5vh;
   height: 85vh;
 }
+
+
