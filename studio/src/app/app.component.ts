@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { Store } from '@ngrx/store';
-import { AppInit } from './core/store/actions/app.action';
 
 
 @Component({
@@ -15,12 +13,9 @@ import { AppInit } from './core/store/actions/app.action';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'studio';
-  
-  constructor(private store: Store){
+  constructor(){
   }
 
   ngOnInit(): void {
-    this.store.dispatch(AppInit())
   }
 }
