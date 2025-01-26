@@ -10,11 +10,10 @@ import { UserRegister } from '../../core/models/user-register';
 import { UserToken } from '../../core/models/user-token';
 
 @Component({
-  selector: 'app-register',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+    selector: 'app-register',
+    imports: [ReactiveFormsModule],
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
   protected registerForm!: FormGroup;

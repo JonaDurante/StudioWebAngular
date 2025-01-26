@@ -3,11 +3,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule ,Validators } from '@angula
 import { UserProfileService } from './service/user-profile.service';
 
 @Component({
-  selector: 'app-user-profile',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './user-profile.component.html',
-  styleUrl: './user-profile.component.scss'
+    selector: 'app-user-profile',
+    imports: [ReactiveFormsModule],
+    templateUrl: './user-profile.component.html',
+    styleUrl: './user-profile.component.scss'
 })
 export class UserProfileComponent implements OnInit {
   protected userProfileForm!: FormGroup;
