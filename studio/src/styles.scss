@@ -1,5 +1,5 @@
-@import './styles/reset.scss';
-@import './styles/variables.scss';
+@use './styles/reset.scss' as *;
+@use './styles/variables.scss' as *;
 
 /*CUSTOMIZE BOOTSTRAP*/
 
@@ -8,7 +8,7 @@ $secondary:$cust-secondary;
 $success:$cust-accent;
 
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../node_modules/bootstrap/scss/bootstrap.scss' as *;
 
 /* GENERAL */
 

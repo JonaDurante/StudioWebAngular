@@ -1,23 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 /* COLORS */
+$cust-primary: #264653 !default;
+$cust-secondary: #2A9D8F !default;
+$cust-accent: #E9C46A !default;
+$cust-text: #000000 !default;
+$cust-background: #faf1e2 !default;
 
-$cust-primary: #264653;
-$cust-secondary: #2A9D8F;
-$cust-accent: #E9C46A;
-$cust-text: #000000;
-$cust-background: #faf1e2;
-
-$cust-primary-dark: #abccd8;
-$cust-secondary-dark: #62d5c8;
-$cust-accent-dark: #977317;
-$cust-text-dark: #ffffff;
-$cust-background-dark: #031b27;
+$cust-primary-dark: #abccd8 !default;
+$cust-secondary-dark: #62d5c8 !default;
+$cust-accent-dark: #977317 !default;
+$cust-text-dark: #ffffff !default;
+$cust-background-dark: #031b27 !default;
 
 /* FONTS */
-$main-size: 16px;
-$primary-font-family: Roboto, Helvetica, san-serif;
-$body-font-size: 1.5rem;
+$main-size: 16px !default;
+$primary-font-family: Roboto, Helvetica, sans-serif !default;
+$body-font-size: 1.5rem !default;
 
 /* CUSTOM VARIABLES */
-$ghost: #528cce;
+$ghost: #528cce !default;

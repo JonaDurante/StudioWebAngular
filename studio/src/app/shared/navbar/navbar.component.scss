@@ -1,7 +1,7 @@
-@import '../../../styles/variables.scss';
+@use '../../../styles/variables.scss' as vars;
 
 .nav-link {
-  color: $cust-accent;
+  color: vars.$cust-accent;
 }
 
 .navbar-nav .nav-link.active {
@@ -9,5 +9,5 @@
 }
 
 .navbar-toggler{
-background-color: $cust-accent;
+background-color: vars.$cust-accent;
 }

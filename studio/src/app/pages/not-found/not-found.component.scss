@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@use '../../../styles/variables.scss' as vars;
 
 
 .main__container {
@@ -11,7 +11,7 @@
 }
 
 .container__heading {
-  color: $cust-secondary;
+  color: vars.$cust-secondary;
   font-size: 12.5rem;
   letter-spacing: .10em;
   margin: .025em 0;
@@ -24,18 +24,18 @@
 
   & > span {
     animation: spooky 2s alternate infinite linear;
-    color: $ghost;
+    color: vars.$ghost;
     display: inline-block;
   }
 }
 
 .container__subtitle {
-  color: $cust-secondary;
+  color: vars.$cust-secondary;
   margin-bottom: .40em;
 }
 
 .container_paragraph {
-  color: $cust-text;
+  color: vars.$cust-text;
   margin-top: 0;
 }
 
