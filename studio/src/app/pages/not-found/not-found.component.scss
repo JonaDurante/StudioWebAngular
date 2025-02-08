@@ -11,7 +11,7 @@
 }
 
 .container__heading {
-  color: vars.$cust-secondary;
+  color: vars.$secondary-color;
   font-size: 12.5rem;
   letter-spacing: .10em;
   margin: .025em 0;
@@ -30,12 +30,12 @@
 }
 
 .container__subtitle {
-  color: vars.$cust-secondary;
+  color: vars.$secondary-color;
   margin-bottom: .40em;
 }
 
 .container_paragraph {
-  color: vars.$cust-text;
+  color: vars.$text-color;
   margin-top: 0;
 }
 

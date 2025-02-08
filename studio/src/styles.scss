@@ -3,37 +3,33 @@
 
 /*CUSTOMIZE BOOTSTRAP*/
 
-$primary:$cust-primary;
-$secondary:$cust-secondary;
-$success:$cust-accent;
+$primary:$primary-color;
+$secondary:$secondary-color;
+$success:$accent-color;
 
 
-@use '../node_modules/bootstrap/scss/bootstrap.scss' as *;
+@use '../node_modules/bootstrap/dist/css/bootstrap.min.css' as *;
+@use "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 /* GENERAL */
 
 html {
-  font-size: $main-size;
+  font-size: $base-font-size;
 }
 
 body {
   width: 100%;
   height: auto;
-  font-family: $primary-font-family;
-  font-size: $body-font-size;
-  background-color: $cust-background;
-  color: $cust-text;
-  overflow: hidden;
+  font-family: $primary-font;
+  font-size: $body-line-height;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex; /* Usa flexbox para el diseño general */
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $cust-text;
-}
-
-
-/* LAYOUT */
-.layout {
-  border: 1px red solid;
-  margin-top: 5vh;
-  height: 85vh;
+  color: $text-color;
 }

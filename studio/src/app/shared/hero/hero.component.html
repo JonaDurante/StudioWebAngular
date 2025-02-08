@@ -1,0 +1,11 @@
+<section class="hero">
+  <div class="hero__overlay"> </div> <img [src]="imageUrl()" alt="Pegasus Estudio de Danza" class="hero__image">
+  <div class="hero__content">
+    <h1 class="hero__title" [class.animated]="isTitleAnimated()">{{ title() }}</h1>
+    <p class="hero__subtitle">{{ subtitle() }}</p>
+    <div class="hero__buttons">
+      <button class="hero__button" [routerLink]="['/register']" routerLinkActive="router-link-active" >¡Inscríbete ahora!</button>
+      <button class="hero__button hero__button--secondary">Más información</button>
+    </div>
+  </div>
+</section>

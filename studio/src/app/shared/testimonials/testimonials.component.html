@@ -1,0 +1,8 @@
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  @for (testimonial of testimonials(); track $index) {
+    <div class="testimonial-card">
+      <h3>{{testimonial.name}}</h3>
+      <p>{{testimonial.quote}}</p>
+    </div>
+  }
