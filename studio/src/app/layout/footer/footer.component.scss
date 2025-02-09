@@ -1,4 +1,4 @@
-@use "../../../styles/variables.scss" as vars;
+@use '../../../styles/variables.scss' as *;
 
 
 .section {
@@ -10,14 +10,10 @@
 }
 
 .footer {
-  bottom: 0;
-  width: 100%;
-  background: #3586ff;
-  height: fit-content;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: $primary-color;
+  color: $text-color;
+  padding: $spacing-medium / 2;
+  text-align: center;
 }
 
 .social-icon,
