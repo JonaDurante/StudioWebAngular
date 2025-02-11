@@ -1,5 +1,20 @@
-<app-header appScrollHeader></app-header>
-<main>
-    <router-outlet></router-outlet>
-</main>
-<app-footer></app-footer>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <app-header appScrollHeader></app-header>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-11">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+
