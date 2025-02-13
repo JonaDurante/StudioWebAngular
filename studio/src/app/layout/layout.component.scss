@@ -1,19 +1,7 @@
-main {
-  flex: 1; /* El main ocupa el espacio disponible */
-  overflow-y: auto; /* Agrega scroll solo al main */
-  padding-top: 60px; /* Espacio para el header fijo */
-}
-
-/* Estilos para el header */
-app-header {
-  position: fixed; /* Fija el header en la parte superior */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100; /* Asegura que el header esté por encima de otros elementos */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de ocultar/mostrar */
-}
-
-app-header.hidden {
-  transform: translateY(-100%); /* Oculta el header deslizándolo hacia arriba */
+.full-screen-background {
+  height: 100vh;
+  background-image: url('../../assets/images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -2,10 +2,11 @@ import { NgClass } from '@angular/common';
 import { Component, OnDestroy, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
+import { LogoComponent } from '../../shared/logo/logo.component';
 
 @Component({
     selector: 'app-navbar',
-    imports: [RouterLink, NgClass],
+    imports: [RouterLink, NgClass, LogoComponent],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss'
 })
