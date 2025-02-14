@@ -11,10 +11,10 @@ import { HeaderComponent } from './header/header.component';
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, ScrollHeaderDirective]
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent]
 })
 export class LayoutComponent implements OnInit, OnDestroy {
-  isMobile = false; /// Checkear si hay que utilizar
+  protected isMobile = false; /// Checkear si hay que utilizar
   private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(private breakpointObserver: BreakpointObserver) {}

@@ -15,7 +15,6 @@ export class NavbarComponent implements OnDestroy {
   protected activeRoute = signal('home');
   protected isDarkMode = signal(false); ///mover a un store
 
-
   private unsubscribe$ = new Subject<void>();
 
   constructor(private router: Router) {
