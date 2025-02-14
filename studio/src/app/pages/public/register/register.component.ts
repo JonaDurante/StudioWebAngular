@@ -6,8 +6,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { RegisterService } from './service/register.service';
-import { UserRegister } from '../../core/models/user-register';
-import { UserToken } from '../../core/models/user-token';
+import { UserToken } from '../../../core/models/user-token';
+import { UserRegister } from '../../../core/models/user-register';
 
 @Component({
     selector: 'app-register',

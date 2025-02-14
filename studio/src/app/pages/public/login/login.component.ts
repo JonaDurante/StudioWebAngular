@@ -6,9 +6,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { UserLogin } from '../../core/models/user-login';
 import { LoginService } from './service/login.service';
-import { UserToken } from '../../core/models/user-token';
+import { UserToken } from '../../../core/models/user-token';
+import { UserLogin } from '../../../core/models/user-login';
 
 @Component({
     selector: 'app-login',
