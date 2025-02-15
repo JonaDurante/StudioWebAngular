@@ -13,13 +13,13 @@ export class UserProfileService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public GetProfile(id: string): Observable<UserProfile> {
+  public getProfile(id: string): Observable<UserProfile> {
     return this.httpClient.get<UserProfile>(
       this.baseUrl + 'Account/GetUserDataById/' + id
     );
   }
 
-  public EditProfile(userProfile: UserProfile): Observable<UserToken> {
+  public editProfile(userProfile: UserProfile): Observable<UserToken> {
     return this.httpClient.post<UserToken>(
       this.baseUrl + 'Account/EditUserData', userProfile
     );

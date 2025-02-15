@@ -1,20 +1,5 @@
-<main class="container-fluid full-screen-background">
-  <div class="row">
-    <div class="col-12">
-      <app-header></app-header>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <main>
-        <router-outlet></router-outlet>
-      </main>
-    </div>
-  </div>
- <div class="row">
-    <div class="col-12">
-      <app-footer></app-footer>
-    </div>
-  </div>
+<app-header [class.scrolled]="isScrolled"></app-header>
+<main [class.full-screen-background]="isLandingPage">
+  <router-outlet></router-outlet>
 </main>
-
+<app-footer></app-footer>

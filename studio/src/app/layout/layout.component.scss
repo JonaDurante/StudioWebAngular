@@ -1,3 +1,30 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+app-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; // Asegura que esté sobre el contenido
+  transition: background-color 0.3s ease-in-out, padding-top 0.5s ease-in-out;
+  padding-top: 25px;
+
+  &.scrolled {
+    padding-top: 0px;
+    background-color: rgba(158, 154, 154, 0.8); // Oscurece el fondo al hacer scroll
+  }
+}
+
+app-footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+
+
 .full-screen-background {
   height: 100vh;
   background-image: url('../../assets/images/hero-background-1.jpg');

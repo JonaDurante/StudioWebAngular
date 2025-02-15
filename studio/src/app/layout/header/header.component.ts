@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
@@ -8,5 +8,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+   isScrolled = false;
+
+    @HostListener("window:scroll", [])
+    onWindowScroll() {
+      this.isScrolled = window.scrollY > 50;
+    }
 
 }

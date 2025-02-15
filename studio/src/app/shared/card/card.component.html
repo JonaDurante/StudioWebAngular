@@ -1,0 +1,12 @@
+<div class="card m-4">
+  @if(hasImage){
+  <div class="card-image d-flex flex-column align-items-center">
+    <img [src]="imgSrc" class="card-img" [alt]="imgAlt" />
+    <a href="#" class="btn btn-primary mt-4" style="width: 8rem"> CLICK </a>
+  </div>
+  }
+  <div class="card-body">
+    <h5 class="card-title">{{ cardTitle }}</h5>
+    <p class="card-text">{{ cardText }}</p>
+  </div>
+</div>
