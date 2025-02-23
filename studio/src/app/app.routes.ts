@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthRouteResolver } from './core/resolver/auth.resolver';
+import { AuthRouteResolver } from './core/resolvers/auth.resolver';
 
 export const routes: Routes = [
   { path: '', redirectTo: AuthRouteResolver, pathMatch: 'full' },
