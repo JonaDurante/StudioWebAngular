@@ -10,10 +10,10 @@ import { UserToken } from '../../../core/models/user-token';
 import { UserRegister } from '../../../core/models/user-register';
 
 @Component({
-    selector: 'app-register',
-    imports: [ReactiveFormsModule],
-    templateUrl: './register.component.html',
-    styleUrls: ['./register.component.scss']
+  selector: 'app-register',
+  imports: [ReactiveFormsModule],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
   protected registerForm!: FormGroup;
@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private registerService: RegisterService
+    private registerService: RegisterService,
   ) {}
 
   ngOnInit(): void {

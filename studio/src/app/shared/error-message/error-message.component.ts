@@ -6,7 +6,7 @@ import { NgClass } from '@angular/common';
   selector: 'error-message',
   imports: [NgClass],
   templateUrl: './error-message.component.html',
-  styleUrl: './error-message.component.scss'
+  styleUrl: './error-message.component.scss',
 })
 export class ErrorMessageComponent {
   private readonly errorService = inject(ErrorMessageService);

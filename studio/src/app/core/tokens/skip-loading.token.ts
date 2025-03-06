@@ -1,6 +1,3 @@
-import { HttpContextToken } from "@angular/common/http";
+import { HttpContextToken } from '@angular/common/http';
 
-
-export const SKIP_LOADING = new HttpContextToken(
-  () => false
-);
+export const SKIP_LOADING = new HttpContextToken(() => false);

@@ -5,7 +5,7 @@ import { Testimonial } from './models/testimonial.model';
   selector: 'app-testimonials',
   imports: [],
   templateUrl: './testimonials.component.html',
-  styleUrl: './testimonials.component.scss'
+  styleUrl: './testimonials.component.scss',
 })
 export class TestimonialsComponent {
   protected testimonials = signal<Testimonial[]>([

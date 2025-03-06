@@ -15,7 +15,7 @@ export class RegisterService {
   public register(userRegister: UserRegister): Observable<UserToken> {
     return this.httpClient.post<UserToken>(
       this.baseUrl + this.registerUrl,
-      userRegister
+      userRegister,
     );
   }
 }

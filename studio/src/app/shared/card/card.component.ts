@@ -4,7 +4,7 @@ import { Component, input, Input, OnInit } from '@angular/core';
   selector: 'app-card',
   imports: [],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
 })
 export class CardComponent {
   public cardTitle = input.required<string>();
@@ -14,7 +14,6 @@ export class CardComponent {
   public badgeLevel = input<string>();
   public duration = input<number>();
   public instructor = input<string>();
-
 
   protected hasImage: boolean = false;
   protected hasBadge: boolean = false;
@@ -30,5 +29,4 @@ export class CardComponent {
 
     return this.badgeLevelMap[this.badgeLevel()!];
   }
-
 }

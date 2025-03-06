@@ -3,7 +3,7 @@ import { Message } from '../../models/error-message/message';
 import { MessageSeverity } from '../../models/error-message/message-severity';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ErrorMessageService {
   private messageSignal = signal<Message | null>(null);
@@ -12,8 +12,8 @@ export class ErrorMessageService {
   public showMessage(message: string, severity: MessageSeverity): void {
     this.messageSignal.set({
       message: message,
-      severity: severity
-    })
+      severity: severity,
+    });
   }
 
   public clear() {
