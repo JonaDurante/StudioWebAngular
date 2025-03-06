@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, Signal, signal } from '@angular/core';
+import { Component, inject, Signal } from '@angular/core';
 import { LoadService } from '../../core/services/load/load.service';
 
 @Component({

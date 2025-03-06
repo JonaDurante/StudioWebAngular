@@ -1,4 +1,4 @@
 export interface ApiError {
-    status: number,
-    error: any
+  status: number,
+  error: any
 }

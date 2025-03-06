@@ -1,17 +1,24 @@
-<!-- <section class="hero">
-  <div class="container">
+<section class="hero" #hero>
+  <div>
     <div class="hero__text">
-      <h1 class="hero__title" [class.animated]="isTitleAnimated()">{{ title() }}</h1>
+      <h1 class="hero__title" [class.animated]="isTitleAnimated()">
+        {{ title() }}
+      </h1>
     </div>
   </div>
-   <img [src]="imageUrl()" alt="Pegasus Estudio de Danza" class="hero__image w-full h-auto rounded-lg">
   <div class="hero__content">
-    <h1 class="hero__title" [class.animated]="isTitleAnimated()">{{ title() }}</h1>
     <p class="hero__subtitle">{{ subtitle() }}</p>
     <div class="hero__buttons">
-      <button class="hero__button" [routerLink]="['/register']" routerLinkActive="router-link-active" >¡Inscríbete ahora!</button>
-      <button class="hero__button hero__button--secondary">Más información</button>
+      <button
+        class="hero__button btn btn-primary"
+        [routerLink]="['/register']"
+        routerLinkActive="router-link-active"
+      >
+        ¡Inscríbete ahora!
+      </button>
+      <button class="hero__button btn btn-secondary mx-3">
+        Más información
+      </button>
     </div>
   </div>
 </section>
--->

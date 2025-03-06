@@ -1,11 +1,12 @@
 @use './styles/reset.scss' as *;
 @use './styles/variables.scss' as *;
+@use './styles/button.scss' as *;
 
 /*CUSTOMIZE BOOTSTRAP*/
 
-$primary:$primary-color;
-$secondary:$secondary-color;
-$success:$accent-color;
+$primary: $primary-color;
+$secondary: $secondary-color;
+$success: $accent-color;
 
 
 @use '../node_modules/bootstrap/dist/css/bootstrap.min.css' as *;
@@ -24,12 +25,20 @@ body {
   font-size: $body-line-height;
   background-color: $background-color;
   color: $text-color;
-  display: flex; /* Usa flexbox para el diseño general */
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+  display: flex;
+  /* Usa flexbox para el diseño general */
+  flex-direction: column;
+  /* Alinea los elementos verticalmente */
+  min-height: 100vh;
+  /* Asegura que el body ocupe al menos toda la altura de la pantalla */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $text-color;
 }
 

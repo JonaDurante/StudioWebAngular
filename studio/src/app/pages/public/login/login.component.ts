@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { LoginService } from './service/login.service';
 import { UserToken } from '../../../core/models/user-token';
 import { UserLogin } from '../../../core/models/user-login';
+import { AuthService } from '../../../core/services/auth/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
   protected loginForm!: FormGroup;
   private userToken !: UserToken;
 
-  constructor(private fb: FormBuilder, private loginService:LoginService) {}
+  constructor(private fb: FormBuilder, private loginService:LoginService, private auth: AuthService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -46,6 +47,8 @@ export class LoginComponent implements OnInit {
     this.loginService.login(dto).subscribe((res) => {
       if(res){
         this.userToken = res;
+        this.auth.setUser(res); /// Set user
+        // Redirect to home page
       }
     })
   }

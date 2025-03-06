@@ -5,26 +5,39 @@
         <section class="container">
           <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <label for="email" class="form-label">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="email"
                 aria-describedby="emailHelp"
                 formControlName="email"
               />
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <label for="password" class="form-label">Password</label>
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="password"
                 formControlName="password"
               />
             </div>
-            <button type="submit" class="btn btn-primary me-3" [disabled]="loginForm.pristine || loginForm.invalid">Submit</button>
-            <button type="register" class="btn btn-primary" routerLink='/register' routerLinkActive="active ">Register</button>
+            <button
+              type="submit"
+              class="btn btn-primary me-3"
+              [disabled]="loginForm.pristine || loginForm.invalid"
+            >
+              Submit
+            </button>
+            <button
+              type="register"
+              class="btn btn-primary"
+              routerLink="/register"
+              routerLinkActive="active "
+            >
+              Register
+            </button>
           </form>
         </section>
       </div>
@@ -34,7 +47,9 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
       </div>
     </div>
   </div>

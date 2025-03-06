@@ -1,5 +1,13 @@
+<app-header [class.scrolled]="isScrolled"></app-header>
+
+@if(!isLandingPage){
 <app-layout></app-layout>
+} @else {
+<app-landing></app-landing>
+}
 
 <error-message />
 
 <loading />
+
+<app-footer></app-footer>
