@@ -1,0 +1,17 @@
+@use '../../../styles/variables.scss' as *;
+
+
+.section {
+  display: flex;
+  flex: 1;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: $spacing-medium / 2;
+  text-align: center;
+}

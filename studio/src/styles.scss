@@ -1,39 +1,54 @@
-@import './styles/reset.scss';
-@import './styles/variables.scss';
+@use './styles/reset.scss' as *;
+@use './styles/variables.scss' as *;
+@use './styles/button.scss' as *;
 
 /*CUSTOMIZE BOOTSTRAP*/
 
-$primary:$cust-primary;
-$secondary:$cust-secondary;
-$success:$cust-accent;
+$primary: $primary-color;
+$secondary: $secondary-color;
+$success: $accent-color;
 
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../node_modules/bootstrap/dist/css/bootstrap.min.css' as *;
+@use "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 /* GENERAL */
 
 html {
-  font-size: $main-size;
+  font-size: $base-font-size;
+  overflow-x: hidden;
+
 }
 
 body {
   width: 100%;
   height: auto;
-  font-family: $primary-font-family;
-  font-size: $body-font-size;
-  background-color: $cust-background;
-  color: $cust-text;
-  overflow: hidden;
+  font-family: $primary-font;
+  font-size: $body-line-height;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  /* Usa flexbox para el diseño general */
+  flex-direction: column;
+  /* Alinea los elementos verticalmente */
+  min-height: 100vh;
+  /* Asegura que el body ocupe al menos toda la altura de la pantalla */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $cust-text;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color;
 }
 
+a {
+  color: $secondary-color;
+  text-decoration: none;
 
-/* LAYOUT */
-.layout {
-  border: 1px red solid;
-  margin-top: 5vh;
-  height: 85vh;
+  &:hover {
+    color: $accent-color;
+  }
 }

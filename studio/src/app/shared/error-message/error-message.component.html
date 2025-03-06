@@ -1,0 +1,14 @@
+@if(message()) {
+<div class="message-container">
+  <div class="message" [ngClass]="message()?.severity">
+    <span class="message-icon">
+      <i class="fa fa-exclamation-triangle"></i>
+    </span>
+    <span class="message-text">{{ message()?.message }}</span>
+
+    <button class="close-button">
+      <i class="fa fa-cross"></i>
+    </button>
+  </div>
+</div>
+}

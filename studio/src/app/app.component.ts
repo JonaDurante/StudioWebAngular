@@ -1,26 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { Store } from '@ngrx/store';
-import { AppInit } from './core/store/actions/app.action';
+import { Component, HostListener } from '@angular/core';
+import { LayoutComponent } from './layout/layout.component';
+import { LoadingComponent } from './shared/loading/loading.component';
+import { ErrorMessageComponent } from './shared/error-message/error-message.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
+import { LandingComponent } from './pages/public/landing/landing.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [
+      LayoutComponent,
+      LoadingComponent,
+      ErrorMessageComponent,
+      LandingComponent,
+      HeaderComponent,
+      FooterComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
-  title = 'studio';
-  
-  constructor(private store: Store){
-  }
+export class AppComponent {
+  protected isLandingPage = false;
+  private unsubscribe$: Subject<void> = new Subject<void>();
+  protected isScrolled = false;
 
-  ngOnInit(): void {
-    this.store.dispatch(AppInit())
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
+  constructor(private router: Router){}
+
+  ngOnInit() {
+      this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe((event) => {
+        if(event instanceof NavigationEnd) {
+          this.isLandingPage = event.urlAfterRedirects === '/landing';
+        }
+      })
+}
 }

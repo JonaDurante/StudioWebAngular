@@ -1,7 +1,13 @@
-<app-header></app-header>
-<main class="container-fluid d-flex flex-column justify-content-between" style="min-height: 100vh;">
-  <div class="layout">
-    <router-outlet></router-outlet>
-  </div>
-</main>
+<app-header [class.scrolled]="isScrolled"></app-header>
+
+@if(!isLandingPage){
+<app-layout></app-layout>
+} @else {
+<app-landing></app-landing>
+}
+
+<error-message />
+
+<loading />
+
 <app-footer></app-footer>
