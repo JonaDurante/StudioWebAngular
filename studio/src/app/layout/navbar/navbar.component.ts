@@ -5,10 +5,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { LogoComponent } from '../../shared/logo/logo.component';
 
 @Component({
-    selector: 'app-navbar',
-    imports: [RouterLink, NgClass, LogoComponent],
-    templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.scss'
+  selector: 'app-navbar',
+  imports: [RouterLink, NgClass, LogoComponent],
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnDestroy {
   protected isLoggedIn = signal(false); ///mover a un store
@@ -18,9 +18,7 @@ export class NavbarComponent implements OnDestroy {
   private unsubscribe$ = new Subject<void>();
 
   constructor(private router: Router) {
-    this.router.events
-    .pipe(takeUntil(this.unsubscribe$))
-    .subscribe(event => {
+    this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeRoute.set(event.url);
       }

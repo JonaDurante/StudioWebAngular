@@ -5,8 +5,7 @@ import { finalize } from 'rxjs';
 import { SKIP_LOADING } from '../tokens/skip-loading.token';
 
 export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
-
-  if(req.context.get(SKIP_LOADING)){
+  if (req.context.get(SKIP_LOADING)) {
     return next(req);
   }
 
@@ -17,6 +16,6 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
   return next(req).pipe(
     finalize(() => {
       loadingService.loadingOff();
-    })
+    }),
   );
-}
+};

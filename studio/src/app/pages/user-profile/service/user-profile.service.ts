@@ -15,13 +15,14 @@ export class UserProfileService {
 
   public getProfile(id: string): Observable<UserProfile> {
     return this.httpClient.get<UserProfile>(
-      this.baseUrl + 'Account/GetUserDataById/' + id
+      this.baseUrl + 'Account/GetUserDataById/' + id,
     );
   }
 
   public editProfile(userProfile: UserProfile): Observable<UserToken> {
     return this.httpClient.post<UserToken>(
-      this.baseUrl + 'Account/EditUserData', userProfile
+      this.baseUrl + 'Account/EditUserData',
+      userProfile,
     );
   }
 }

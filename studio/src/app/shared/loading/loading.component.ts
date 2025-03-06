@@ -11,6 +11,5 @@ export class LoadingComponent {
   private readonly loadingService = inject(LoadService);
   loading: Signal<boolean> = this.loadingService.loading;
 
-  constructor() {
-  }
+  constructor() {}
 }

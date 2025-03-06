@@ -1,4 +1,4 @@
-import { ClassLevel } from "../enums/class-level";
+import { ClassLevel } from '../enums/class-level';
 
 export interface Class {
   name: string;

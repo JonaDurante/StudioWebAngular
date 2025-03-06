@@ -1,5 +1,5 @@
-export interface UserProfile{
-    userName:        string;
-    customUserName:  string;
-    birthday:       string;
+export interface UserProfile {
+  userName: string;
+  customUserName: string;
+  birthday: string;
 }

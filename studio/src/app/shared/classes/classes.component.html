@@ -6,16 +6,16 @@
     </p>
     <div class="row">
       @for (class of classes(); track $index) {
-      <app-card
-        class="col-4 mb-4"
-        [cardTitle]="class.name"
-        [cardText]="class.description"
-        [imgSrc]="class.imageUrl"
-        [imgAlt]="class.imageAlt"
-        [badgeLevel]="class.level"
-        [duration]="class.duration"
-        [instructor]="class.instructor"
-      ></app-card>
+        <app-card
+          class="col-4 mb-4"
+          [cardTitle]="class.name"
+          [cardText]="class.description"
+          [imgSrc]="class.imageUrl"
+          [imgAlt]="class.imageAlt"
+          [badgeLevel]="class.level"
+          [duration]="class.duration"
+          [instructor]="class.instructor"
+        ></app-card>
       }
     </div>
   </div>
