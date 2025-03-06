@@ -1,13 +1,16 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appScrollHeader]'
+  selector: '[appScrollHeader]',
 })
 export class ScrollHeaderDirective {
   private isHeaderHidden = false;
   private prevScrollpos = window.scrollY;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -28,5 +31,4 @@ export class ScrollHeaderDirective {
       this.prevScrollpos = currentScrollPos;
     }
   }
-
 }

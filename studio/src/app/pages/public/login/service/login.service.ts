@@ -15,7 +15,7 @@ export class LoginService {
   public login(userLogin: UserLogin): Observable<UserToken> {
     return this.httpClient.post<UserToken>(
       this.baseUrl + this.loginUrl,
-      userLogin
+      userLogin,
     );
   }
 }

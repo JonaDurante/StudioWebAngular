@@ -8,16 +8,14 @@ $primary: $primary-color;
 $secondary: $secondary-color;
 $success: $accent-color;
 
-
 @use '../node_modules/bootstrap/dist/css/bootstrap.min.css' as *;
-@use "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+@use '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
 /* GENERAL */
 
 html {
   font-size: $base-font-size;
   overflow-x: hidden;
-
 }
 
 body {
