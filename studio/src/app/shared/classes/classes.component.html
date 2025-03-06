@@ -1,11 +1,22 @@
-<section class="clases d-flex flex-wrap justify-content-center">
-  <h2></h2>
-  @for (class of classes(); track $index) {
-  <app-card
-    [cardTitle]="class.name"
-    [cardText]="class.description"
-    [imgSrc]="class.imageUrl"
-    [imgAlt]="class.imageAlt"
-  ></app-card>
-  }
+<section class="clases my-4">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestras clases</h2>
+    <p class="text-center text-muted mb-4">
+      Descubre tu estilo perfecto en nuestras clases
+    </p>
+    <div class="row">
+      @for (class of classes(); track $index) {
+      <app-card
+        class="col-4 mb-4"
+        [cardTitle]="class.name"
+        [cardText]="class.description"
+        [imgSrc]="class.imageUrl"
+        [imgAlt]="class.imageAlt"
+        [badgeLevel]="class.level"
+        [duration]="class.duration"
+        [instructor]="class.instructor"
+      ></app-card>
+      }
+    </div>
+  </div>
 </section>
