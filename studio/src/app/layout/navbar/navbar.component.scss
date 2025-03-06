@@ -1,0 +1,17 @@
+@use '../../../styles/variables.scss' as vars;
+
+.nav-link {
+  color: vars.$primary-color;
+  &:hover {
+    color: vars.$accent-color;
+  }
+}
+
+
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+.navbar-toggler{
+background-color: vars.$accent-color;
+}

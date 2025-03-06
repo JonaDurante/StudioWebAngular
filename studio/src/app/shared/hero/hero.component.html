@@ -1,0 +1,24 @@
+<section class="hero" #hero>
+  <div>
+    <div class="hero__text">
+      <h1 class="hero__title" [class.animated]="isTitleAnimated()">
+        {{ title() }}
+      </h1>
+    </div>
+  </div>
+  <div class="hero__content">
+    <p class="hero__subtitle">{{ subtitle() }}</p>
+    <div class="hero__buttons">
+      <button
+        class="hero__button btn btn-primary"
+        [routerLink]="['/register']"
+        routerLinkActive="router-link-active"
+      >
+        ¡Inscríbete ahora!
+      </button>
+      <button class="hero__button btn btn-secondary mx-3">
+        Más información
+      </button>
+    </div>
+  </div>
+</section>

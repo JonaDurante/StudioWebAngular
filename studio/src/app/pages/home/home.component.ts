@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from "../../shared/hero/hero.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [HeroComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+protected imageUrl: string = '../../../../assets/images/backgrounds/home-studio.jpg';
 
 }

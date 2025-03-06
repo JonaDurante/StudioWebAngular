@@ -1,23 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 /* COLORS */
+$primary-color: #9F02E2 !default;
+$secondary-color: #DE0606 !default;
+$accent-color: #DFB102 !default;
+$text-color: #000000 !default;
+$background-color: #faf1e2 !default;
 
-$cust-primary: #264653;
-$cust-secondary: #2A9D8F;
-$cust-accent: #E9C46A;
-$cust-text: #000000;
-$cust-background: #faf1e2;
-
-$cust-primary-dark: #abccd8;
-$cust-secondary-dark: #62d5c8;
-$cust-accent-dark: #977317;
-$cust-text-dark: #ffffff;
-$cust-background-dark: #031b27;
+$primary-color-dark: #7F01B4 !default;
+$secondary-color-dark: #B10404 !default;
+$accent-color-dark: #B28D01 !default;
+$text-color-dark: #ffffff !default;
+$background-color-dark: #031b27 !default;
 
 /* FONTS */
-$main-size: 16px;
-$primary-font-family: Roboto, Helvetica, san-serif;
-$body-font-size: 1.5rem;
+$base-font-size: 16px !default;
+$primary-font: Roboto, Helvetica, sans-serif !default;
+$body-line-height: 1.5 !default;
+
+/* SPACING */
+$spacing-small: 0.5rem !default;
+$spacing-medium: 1rem !default;
+$spacing-large: 2rem !default;
+
+
+/* BREAKPOINTS */
+$breakpoint-mobile: 768px !default;
+$breakpoint-tablet: 1024px !default;
+
+/* SHADOWS */
+$box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1) !default;
+
+/* BORDER RADIUS */
+$border-radius-small: 5px !default;
+$border-radius-medium: 10px !default;
+
+/* Z-INDEX */
+$z-index-modal: 1000 !default;
+$z-index-navbar: 1050 !default;
 
 /* CUSTOM VARIABLES */
-$ghost: #528cce;
+$ghost: #528cce !default;
