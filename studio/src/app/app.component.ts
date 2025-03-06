@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   private unsubscribe$: Subject<void> = new Subject<void>();
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
+  protected onWindowScroll() {
     this.isScrolled = window.scrollY > 50;
   }
   constructor(private router: Router) {}
