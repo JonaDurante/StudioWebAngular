@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  loginSubmit() {
+  protected loginSubmit() {
     const dto: UserLogin = {
       userName: this.loginForm.get('email')?.value,
       password: this.loginForm.get('password')?.value,

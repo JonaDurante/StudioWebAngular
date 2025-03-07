@@ -3,6 +3,7 @@ import { Component, OnDestroy, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { LogoComponent } from '../../shared/logo/logo.component';
+import { ModalService } from '../../shared/authmodal/services/modal.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +18,10 @@ export class NavbarComponent implements OnDestroy {
 
   private unsubscribe$ = new Subject<void>();
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    protected modalService: ModalService,
+  ) {
     this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeRoute.set(event.url);

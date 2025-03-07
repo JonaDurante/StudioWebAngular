@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  registerSubmit() {
+  protected registerSubmit() {
     const dto: UserRegister = {
       userName: this.registerForm.get('username')?.value,
       email: this.registerForm.get('email')?.value,
