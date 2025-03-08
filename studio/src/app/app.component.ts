@@ -7,6 +7,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { LandingComponent } from './pages/public/landing/landing.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { AuthModalComponent } from './shared/authmodal/components/auth-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     LandingComponent,
     HeaderComponent,
     FooterComponent,
+    AuthModalComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

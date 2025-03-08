@@ -34,13 +34,11 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  registerSubmit() {
+  protected registerSubmit() {
     const dto: UserRegister = {
       userName: this.registerForm.get('username')?.value,
       email: this.registerForm.get('email')?.value,
       password: this.registerForm.get('password')?.value,
-      confirmPassword: this.registerForm.get('confirmPassword')?.value,
-      birthDate: this.registerForm.get('birthDate')?.value,
     };
     this.registerService.register(dto).subscribe((res) => {
       if (res) {
