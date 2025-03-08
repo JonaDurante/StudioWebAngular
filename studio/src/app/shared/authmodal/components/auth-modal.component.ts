@@ -13,6 +13,7 @@ import { UserLogin } from '../../../core/models/user-login';
 import { LoginService } from '../../../pages/public/login/service/login.service';
 import { AuthService } from '../../../core/services/auth/auth.service';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs';
 
 type tabValues = 'login' | 'register';
 
@@ -36,15 +37,13 @@ export class AuthModalComponent {
     private router: Router,
   ) {
     this.registerForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
-      birthDate: [''],
     });
 
     this.loginForm = this.fb.group({
-      email: ['', Validators.required, Validators.email],
+      email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -55,18 +54,25 @@ export class AuthModalComponent {
 
   protected onLogin() {
     const dto: UserLogin = {
-      userName: this.loginForm.get('email')?.value,
+      email: this.loginForm.get('email')?.value,
       password: this.loginForm.get('password')?.value,
     };
-    this.loginService.login(dto).subscribe((res) => {
-      if (res) {
-        if (!localStorage.getItem('session-token')) {
-          localStorage.setItem('session-token', res.token);
-          this.auth.setUser(res);
+    this.loginService
+      .login(dto)
+      .pipe(
+        finalize(() => {
+          this.modalService.closeModal();
+        }),
+      )
+      .subscribe((res) => {
+        if (res) {
+          if (!localStorage.getItem('session-token')) {
+            localStorage.setItem('session-token', res.token);
+            this.auth.setUser(res);
+          }
+          this.router.navigateByUrl('home');
         }
-        this.router.navigateByUrl('home');
-      }
-    });
+      });
   }
 
   protected onRegister() {
@@ -74,8 +80,6 @@ export class AuthModalComponent {
       userName: this.registerForm.get('username')?.value,
       email: this.registerForm.get('email')?.value,
       password: this.registerForm.get('password')?.value,
-      confirmPassword: this.registerForm.get('confirmPassword')?.value,
-      birthDate: this.registerForm.get('birthDate')?.value,
     };
 
     this.registerService.register(dto).subscribe((res) => {

@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
 
   protected loginSubmit() {
     const dto: UserLogin = {
-      userName: this.loginForm.get('email')?.value,
+      email: this.loginForm.get('email')?.value,
       password: this.loginForm.get('password')?.value,
     };
     this.loginService.login(dto).subscribe((res) => {
