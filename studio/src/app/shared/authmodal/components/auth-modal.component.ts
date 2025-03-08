@@ -10,7 +10,7 @@ import { AsyncPipe } from '@angular/common';
 import { RegisterService } from '../../../pages/public/register/service/register.service';
 import { UserRegister } from '../../../core/models/user-register';
 import { UserLogin } from '../../../core/models/user-login';
-import { LoginService } from '../../../pages/public/login/service/login.service';
+import { LoginService } from '../../../core/services/auth/login.service';
 import { AuthService } from '../../../core/services/auth/auth.service';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs';
