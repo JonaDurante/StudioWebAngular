@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { ModalService } from '../services/modal.service';
 import { AsyncPipe } from '@angular/common';
-import { RegisterService } from '../../../pages/public/register/service/register.service';
+import { RegisterService } from '../../../core/services/auth/register.service';
 import { UserRegister } from '../../../core/models/user-register';
 import { UserLogin } from '../../../core/models/user-login';
 import { LoginService } from '../../../core/services/auth/login.service';
