@@ -1,0 +1,14 @@
+<div class="profile-container">
+    <h1>Your Dance Profile</h1>
+    <p>
+      View and manage your dance journey with Pegasus. Update your personal
+      details, track your progress, and stay connected with our vibrant dance
+      community. Let’s keep the rhythm alive!
+    </p>
+  
+    <app-avatar [userAvatar]="userAvatar()"></app-avatar>
+    <app-user-data [userData]="userData()"></app-user-data>
+  
+    <button class="edit-btn" (click)="onEdit()">Edit Profile</button>
+  </div>
+  

@@ -8,12 +8,12 @@ import {
 import { UserProfileService } from './service/user-profile.service';
 
 @Component({
-  selector: 'app-user-profile',
+  selector: 'app-user-profile-form',
   imports: [ReactiveFormsModule],
-  templateUrl: './user-profile.component.html',
-  styleUrl: './user-profile.component.scss',
+  templateUrl: './user-profile-form.component.html',
+  styleUrl: './user-profile-form.component.scss',
 })
-export class UserProfileComponent implements OnInit {
+export class UserProfileFormComponent implements OnInit {
   protected userProfileForm!: FormGroup;
   private userId: string = '75b2120c-7518-47e7-972b-8b266e51ee59';
 
