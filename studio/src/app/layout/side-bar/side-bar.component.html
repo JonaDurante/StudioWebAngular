@@ -1,0 +1,48 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-container"
+     [class.collapsed]="isCollapsed">
+  <!-- Brand / Logo -->
+  <a routerLink="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <span class="fs-4">Pegasus</span>
+  </a>
+  <hr>
+
+  <!-- Navegación -->
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a [routerLink]="'/dashboard'" class="nav-link link-dark" routerLinkActive="active" aria-current="page">
+        <i class="bi bi-speedometer2"></i>
+        <span class="ms-2">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/students'" class="nav-link link-dark" routerLinkActive="active">
+        <i class="bi bi-people"></i>
+        <span class="ms-2">Estudiantes</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/instructors'" class="nav-link link-dark" routerLinkActive="active">
+        <i class="bi bi-person-check"></i>
+        <span class="ms-2">Instructores</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/classes'" class="nav-link link-dark" routerLinkActive="active">
+        <i class="bi bi-calendar4-event"></i>
+        <span class="ms-2">Clases</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/video-library'" class="nav-link link-dark" routerLinkActive="active">
+        <i class="bi bi-camera-reels"></i>
+        <span class="ms-2">Video Library</span>
+      </a>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- Botón para colapsar/expandir -->
+  <button class="btn btn-primary" (click)="toggleCollapse()">
+    {{ isCollapsed ? 'Expandir' : 'Colapsar' }}
+  </button>
+</div>

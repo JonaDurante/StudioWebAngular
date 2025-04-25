@@ -1,3 +1,137 @@
-.modal-overlay { backdrop-filter: blur(4px); }
-.form-field:focus-within label { color: #8E6FF7; transform: translateY(-24px) scale(0.8); }
-.form-field input:not(:placeholder-shown) + label { transform: translateY(-24px) scale(0.8); }
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+  background-color: #f8f9fa;
+  padding: 0;
+  position: relative;
+}
+
+.modal-image {
+  width: 400px;
+  height: 600px;
+  /* Adjust as needed */
+  object-fit: cover;
+}
+
+.logo-description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  width: 150px;
+  /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+.right-column {
+  padding: 30px;
+}
+
+.nav-underline .nav-link {
+  color: #495057;
+  border: none;
+}
+
+.nav-underline .nav-link.active {
+  color: #8E6FF7;
+  border-bottom: 2px solid #8E6FF7;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-check {
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: #8E6FF7;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #8E6FF7;
+  border-color: #8E6FF7;
+  color: white;
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.btn-google,
+.btn-facebook {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close {
+  padding: 0.5rem 0.5rem;
+  background-color: transparent;
+  border: 0;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+/* Center Login Button */
+.btn-primary {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Change Pointer on Sign Up Link */
+.nav-link {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 993px) {
+  .modal-dialog {
+    max-width: 60%;
+  }
+}

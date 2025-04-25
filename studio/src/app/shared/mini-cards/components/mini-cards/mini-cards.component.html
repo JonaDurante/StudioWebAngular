@@ -1,0 +1,8 @@
+<div class="row g-3">
+  @for(card of cards(); track card){
+    <div
+    class="col-sm-6 col-md-3" >
+    <mini-card [card]="card"></mini-card>
+  </div>
+}
+</div>

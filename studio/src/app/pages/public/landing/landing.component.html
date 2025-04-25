@@ -1,8 +1,10 @@
+<app-header [class.scrolled]="isScrolled"></app-header>
 <section class="hero-section">
   <app-hero [imageUrl]="imageUrl"></app-hero>
 </section>
 <section class="classes-section">
   <!-- Contenido de clases -->
-  <app-classes></app-classes>
+  <app-classes />
   <a href="#" class="btn btn-primary mt-4"> Ver todas nuestras clases </a>
 </section>
+<app-big-footer />

@@ -1,15 +1,12 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Subject, takeUntil } from 'rxjs';
-import { CommonModule } from '@angular/common';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { MiniFooterComponent } from './mini-footer/mini-footer.component';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
-  imports: [CommonModule, RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, MiniFooterComponent],
 })
 export class LayoutComponent {}

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AuthRouteResolver } from './core/resolvers/auth.resolver';
+import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: AuthRouteResolver, pathMatch: 'full' },
@@ -22,21 +23,44 @@ export const routes: Routes = [
 
   //Private routes
   {
-    path: 'home',
-    loadComponent: () =>
-      import('./pages/home/home.component').then((m) => m.HomeComponent),
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'home',
+        loadComponent: () =>
+          import('./pages/home/home.component').then((m) => m.HomeComponent),
+      },
+      {
+        path: 'profile',
+        loadComponent: () =>
+          import('./pages/user-profile/user-profile.component').then(
+            (m) => m.UserProfileComponent,
+          ),
+      },
+      {
+        path: 'videos',
+        loadComponent: () =>
+          import('./pages/videos/videos.component').then(
+            (m) => m.VideosComponent,
+          ),
+      },
+    ],
   },
+
+  //Admin routes
   {
-    path: 'profile',
-    loadComponent: () =>
-      import('./pages/user-profile/user-profile.component').then(
-        (m) => m.UserProfileComponent,
-      ),
-  },
-  {
-    path: 'videos',
-    loadComponent: () =>
-      import('./pages/videos/videos.component').then((m) => m.VideosComponent),
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./pages/admin/components/dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent,
+          ),
+      },
+    ],
   },
 
   {
